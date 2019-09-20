@@ -32,4 +32,6 @@ class Student(models.Model):
 	class Meta:
 		verbose_name = verbose_name_plural = 'student information'
 
-
+	@property
+	def gender_show(self):
+		return dict(self.GENDER_ITEMS)[self.gender]
